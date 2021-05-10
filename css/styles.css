@@ -1,0 +1,107 @@
+/*
+  ========================================
+  Grid
+  ========================================
+*/
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: Rubik, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/*
+  ========================================
+  Custom Styles
+  ========================================
+*/
+
+.global-nav {
+  position: sticky;
+  top: 0;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 0 48px rgb(0 0 0 / 15%);
+}
+
+@media (min-width: 1024px) {
+  .nav-1 {
+    display: grid;
+    align-items: flex-start;
+    grid-template-columns: 1fr max-content 1fr;
+  }
+  .nav-list {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-list > li {
+    padding: 0 1rem;
+  }
+
+  .dropdown::after {
+    position: relative;
+    top: 18px;
+    pointer-events: none;
+    float: right;
+    margin-left: 0.5rem;
+    height: 0.75rem;
+    width: 0.75rem;
+    background-image: url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAxMiAxMic+PHBhdGggZmlsbD0nbm9uZScgc3Ryb2tlPScjQTdBQUIyJyBkPSdNMTEuNSAzLjVMNiA5IC41IDMuNScvPjwvc3ZnPg==);
+    content: "";
+  }
+
+  .main-logo {
+    display: block;
+    width: 4.125rem;
+    padding: 1em 0;
+    margin-left: 1.5rem;
+  }
+
+  .newsletter-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    max-height: 100%;
+  }
+
+  .newsletter-icon {
+    height: 20px;
+    width: 20px;
+    margin-right: 15px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .nav-list > li {
+    padding: 0 0.75rem;
+  }
+}
+
+@media (max-width: 1023px) {
+  .nav-1 {
+    display: none;
+  }
+}
+
+.nav-list > li {
+  font-family: "Rajdhani", sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  color: rgba(80, 86, 102);
+  line-height: 52px;
+  padding-top: 0.1875rem;
+}
